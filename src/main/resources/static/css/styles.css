@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #9789ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: white;
+    margin: 20px;
+    padding: 40px;
+    text-align: center;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-text {
+    color: #9789ff;
+}
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #9789ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: white;
+    margin: 0px;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 0.8rem;
+}
+
+.footer-text {
+    color:burlywood;
+    max-width: 900px;
+}
+
+
+
+.login-title {
+    font-size: 1.5rem;
+    color: #7a6e6e;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7a6e6e;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-link {
+    margin-bottom: 20px;
+}
+
+.register-link a {
+    color: blue;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    padding: 10px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #555;
+}
+
+.register-title {
+    font-size: 1.5rem;
+    color: #7a6e6e;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7a6e6e;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-link {
+    margin-bottom: 20px;
+}
+
+.login-link a {
+    color: blue;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.register-btn {
+    padding: 10px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #555;
+}
+
+
+.balance {
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+}
+
+.balance-amount {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.reservation-title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #7a6e6e;
+}
+
+.street-select input {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.date-time {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.date-time input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.time-inputs input {
+    margin-left: 10px;
+}
+
+.ev-options button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: green;
+    margin: 20px 0;
+}
+
+.price-amount {
+    font-size: 1.5rem;
+    color: green;
+}
+
+.reserve-btn {
+    padding: 10px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.reserve-btn:hover {
+    background-color: #555;
+}
+
+.confirmation-message {
+    font-size: 1.5rem;
+    color: green;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.back-btn {
+    padding: 10px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #555;
+}
+
+.balance {
+    font-size: 1.5rem;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.add-balance-btn {
+    padding: 10px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.add-balance-btn:hover {
+    background-color: #555;
+}
+
+.reservation-list {
+    margin-bottom: 30px;
+}
+
+.reservation-list p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.reserve-new-btn {
+    padding: 10px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.reserve-new-btn:hover {
+    background-color: #555;
+}

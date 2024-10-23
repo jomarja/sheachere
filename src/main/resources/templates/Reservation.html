@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shearere - Parking Reservation</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header th:insert = "blocks/header::header"></header>
+
+
+        <div class="content">
+            <h2 class="balance">Balance: <span class="balance-amount">100$</span></h2>
+            <h3 class="reservation-title">Make Reservation</h3>
+
+            <form class="reservation-form">
+                <div class="form-section">
+                    <h4 class="section-title">Choose Street To Park</h4>
+                    <div class="street-select">
+                        <input type="text" placeholder="Super Avenue New York 12324">
+                        <input type="text" placeholder="Super Avenue New York 12324">
+                        <input type="text" placeholder="Super Avenue New York 12324">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 class="section-title">Choose Date and Time</h4>
+                    <div class="date-time">
+                        <input type="text" placeholder="dd/mm/yy">
+                        <div class="time-inputs">
+                            <input type="text" placeholder="From" value="10:00">
+                            <input type="text" placeholder="To" value="16:00">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 class="section-title">Do You Have EV?</h4>
+                    <div class="ev-options">
+                        <button type="button">Yes</button>
+                        <button type="button">No</button>
+                    </div>
+                </div>
+
+                <h3 class="price">Price : <span class="price-amount">10$</span></h3>
+
+                <button type="submit" class="reserve-btn">Reserve</button>
+            </form>
+        </div>
+
+        <footer th:insert="blocks/footer::footer"></footer>
+    </div>
+</body>
+</html>
