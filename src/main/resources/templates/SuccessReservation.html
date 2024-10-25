@@ -8,20 +8,14 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1 class="title">SHEAჩERE</h1>
-        </header>
+        <header th:insert = "blocks/header::header"></header>
 
         <div class="content">
             <h2 class="confirmation-message">You Reserved The Spot</h2>
-            <a href="#" class="back-btn">Back to Main Page</a>
+            <a href="/profile" class="back-btn">Back to Main Page</a>
         </div>
 
-        <footer>
-            <p class="footer-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
-        </footer>
+        <footer th:insert="blocks/footer::footer"></footer>
     </div>
 </body>
 </html>

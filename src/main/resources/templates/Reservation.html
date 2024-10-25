@@ -12,42 +12,51 @@
 
 
         <div class="content">
-            <h2 class="balance">Balance: <span class="balance-amount">100$</span></h2>
-            <h3 class="reservation-title">Make Reservation</h3>
+            <form th:action="@{/reservation}" method="post">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 
-            <form class="reservation-form">
+                <!-- Parking lot selection -->
                 <div class="form-section">
                     <h4 class="section-title">Choose Street To Park</h4>
-                    <div class="street-select">
-                        <input type="text" placeholder="Super Avenue New York 12324">
-                        <input type="text" placeholder="Super Avenue New York 12324">
-                        <input type="text" placeholder="Super Avenue New York 12324">
+                    <div th:each="el : ${parkinglots}" class="styled-checkbox">
+                        <label>
+                            <input type="radio" name="parkinglot" th:value="${el.lotID}" th:text="${el.location}">
+                        </label>
                     </div>
                 </div>
 
+                <!-- Date and Time Selection -->
                 <div class="form-section">
                     <h4 class="section-title">Choose Date and Time</h4>
-                    <div class="date-time">
-                        <input type="text" placeholder="dd/mm/yy">
+                    <div class = "date-time">
+                    <input type="date" name="date" placeholder="dd/mm/yyyy">
+
+
                         <div class="time-inputs">
-                            <input type="text" placeholder="From" value="10:00">
-                            <input type="text" placeholder="To" value="16:00">
+                        <input type="time" name="start_time" placeholder="From">
+                        <input type="time" name="end_time" placeholder="To">
                         </div>
-                    </div>
+                        </div>
                 </div>
 
+                <!-- EV Charging Selection -->
                 <div class="form-section">
                     <h4 class="section-title">Do You Have EV?</h4>
-                    <div class="ev-options">
-                        <button type="button">Yes</button>
-                        <button type="button">No</button>
+                    <div class="styled-checkbox">
+                        <label>
+                            <input type="checkbox" name="evCharging" value="true"> Yes
+                        </label>
+                    </div>
+                    <div th:if="${message}" class="error-message">
+                        <p th:text="${message}"></p>
                     </div>
                 </div>
 
-                <h3 class="price">Price : <span class="price-amount">10$</span></h3>
-
                 <button type="submit" class="reserve-btn">Reserve</button>
+                <br>
+                <a href="/profile" class="add-balance-btn">profile</a>
             </form>
+
         </div>
 
         <footer th:insert="blocks/footer::footer"></footer>

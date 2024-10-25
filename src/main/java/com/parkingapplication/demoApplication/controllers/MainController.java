@@ -11,14 +11,10 @@ public class MainController {
 
 
     @GetMapping("/")
-    public String greeting(Model model){
+    public String home(Model model){
         model.addAttribute("title", "main page");
         return "Home1";
     }
 
-    @GetMapping("/reservation")
-    public String reservattion(Model model){
 
-        return "Reservation";
-    }
 }
