@@ -13,13 +13,7 @@
         <header th:insert = "blocks/header::header"></header>
 
         <div class="content">
-            <strong class = "price-amount">$</strong> <span class="balance" th:text="${payment}"></span>
 
-
-            <form action="/profile" method="post">
-                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-                <br> <button type="submit" class="add-balance-btn">Add 10$ to balance</button>
-            </form>
             <p>You Have Spot waiting for you At:</p>
 <!--            <div th:each="el : ${reservations}" class="reservation-list">-->
             <div th:each="reservation : ${reservations}" class="reservation-list">
