@@ -56,13 +56,6 @@ public class ReserveController {
             Model model,
             Principal principal) {
 
-
-        System.out.println("EV Charging: " + evCharging);
-        System.out.println("Date: " + date);
-        System.out.println("Start Time: " + start_time);
-        System.out.println("End Time: " + end_time);
-        System.out.println("user: " + principal.getName());
-
         try {
             // Check if a parking lot was selected
             if (parkinglot == null) {

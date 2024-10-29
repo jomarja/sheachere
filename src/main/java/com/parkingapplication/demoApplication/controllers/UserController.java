@@ -46,8 +46,6 @@ public class UserController {
                 return "redirect:/admin";
             }
 
-            model.addAttribute("username", user.getUsername());
-            model.addAttribute("email", user.getEmail());
             model.addAttribute("payment",user.getPaymentInfo());
         }
 

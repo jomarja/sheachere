@@ -1,5 +1,6 @@
 package com.parkingapplication.demoApplication.model;
 
+import java.util.LinkedList;
 import java.util.Objects;
 
 
@@ -73,6 +74,7 @@ public class User {
         this.paymentInfo = paymentInfo;
         this.role = role;
     }
+
 
     public User(String username, String password, String email, Role role, int paymentInfo) {
         this.username = username;

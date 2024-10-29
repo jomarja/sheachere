@@ -30,7 +30,6 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/css/**", "/js/**", "/images/**", "/webjars/**").permitAll()
                         .requestMatchers("/login", "/register").permitAll()
-                        .requestMatchers("/profile").authenticated()
                         .requestMatchers("/reservation", "/reserve").permitAll()
                         .requestMatchers("/admin").hasAuthority(Role.ADMIN.toString())
                         .anyRequest().authenticated()
