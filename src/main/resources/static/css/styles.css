@@ -1,506 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-    color: #fff;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+  background: url(https://images.pexels.com/photos/1756957/pexels-photo-1756957.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+input, textarea {
+  font-family: inherit;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  background-color: #fff;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="time"] {
+  background-color: #fff;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+input:focus, textarea:focus {
+  border-color: #495057;
+  outline: none;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 header {
-    text-align: center;
-    background-color: #333;
-    padding: 20px;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #343a40;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
 }
 
-.title {
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 2.5rem;
-    color: #9789ff;
-    font-weight: bold;
-    letter-spacing: 2px;
+h2, .subtitle, .register-title, .login-title {
+  font-weight: 600;
+  color: #495057;
 }
 
-.content {
-    flex-grow: 1;
-    background-color: white;
-    margin: 20px;
-    padding: 40px;
-    text-align: center;
-    color: #333;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.description {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1rem;
-}
-
-footer {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-.footer-text {
-    color: #9789ff;
-}
-
-
-
-
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-    color: #fff;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-}
-
-header {
-    text-align: center;
-    background-color: #333;
-    padding: 20px;
-}
-
-.title {
-    font-size: 2.5rem;
-    color: #9789ff;
-    font-weight: bold;
-    letter-spacing: 2px;
+.subtitle, .description {
+  font-size: 1.2rem;
+  color: #6c757d;
 }
 
 .content {
-    flex-grow: 1;
-    background-color: white;
-    margin: 0px;
+  padding: 2rem;
 }
 
-footer {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 0.8rem;
+.btn, .login-btn, .register-btn, .reserve-btn, .btn-logout, .back-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+  width: auto;
+  transition: background-color 0.3s;
 }
 
-.footer-text {
-    color:burlywood;
-    max-width: 900px;
+.btn:hover, .login-btn:hover, .register-btn:hover, .reserve-btn:hover, .btn-logout:hover, .back-btn:hover {
+  background-color: #0056b3;
 }
 
-
-
-.login-title {
-    font-size: 1.5rem;
-    color: #7a6e6e;
-    font-weight: bold;
-    margin-bottom: 20px;
+.register-link, .login-link {
+  font-size: 1rem;
+  color: #007bff;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.input-group {
-    margin-bottom: 15px;
-    width: 100%;
-    max-width: 300px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #7a6e6e;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.register-link {
-    margin-bottom: 20px;
-}
-
-.register-link a {
-    color: blue;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
-
-.login-btn {
-    padding: 10px 30px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.login-btn:hover {
-    background-color: #555;
-}
-
-.register-title {
-    font-size: 1.5rem;
-    color: #7a6e6e;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.register-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.input-group {
-    margin-bottom: 15px;
-    width: 100%;
-    max-width: 300px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #7a6e6e;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.login-link {
-    margin-bottom: 20px;
-}
-
-.login-link a {
-    color: blue;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-}
-
-.register-btn {
-    padding: 10px 30px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.register-btn:hover {
-    background-color: #555;
-}
-
-
-.balance {
-    font-size: 1.5rem;
-    color: red;
-    font-weight: bold;
-}
-
-.balance-amount {
-    font-size: 1.5rem;
-    color: red;
-}
-
-.reservation-title {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    font-weight: bold;
+.register-link a, .login-link a {
+  color: #007bff;
 }
 
 .form-section {
-    margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .section-title {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #7a6e6e;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #495057;
+  margin-bottom: 0.8rem;
 }
 
-.street-select input {
-    width: 100%;
-    max-width: 300px;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.styled-checkbox {
+  margin-bottom: 1rem;
 }
 
-.date-time {
-    display: flex;
-    justify-content: space-between;
-    max-width:300px;
-    margin: 0 auto;
-}
-input[type="date"] {
-    width: 250px; /* You can adjust this value as needed */
-    padding: 8px; /* Add padding for better appearance */
-    font-size: 16px; /* Adjust font size if needed */
-    border: 1px solid #ccc; /* Border styling */
-    border-radius: 4px; /* Border radius for smooth edges */
-}
-input[type="time"] {
-    width: 300px; /* You can adjust this value as needed */
-    padding: 20px; /* Add padding for better appearance */
-    font-size: 12px; /* Adjust font size if needed */
-    border: 1px solid #ccc; /* Border styling */
-    border-radius: 4px; /* Border radius for smooth edges */
-}
-.date-time input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 150px;
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
 }
 
-.time-inputs input {
-    margin-left: 5px;
-    width: 90px;
-}
-.form-logout {
-    margin-top: 1.5rem; /* Adjusts the top margin */
-    display: flex;
-    justify-content: center;
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #343a40;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
 }
 
-.btn-logout {
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    padding: 0.5rem 1.5rem; /* Adjusts the button padding */
-    border-radius: 0.375rem; /* Makes the button slightly rounded */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a light shadow */
-    transition: background-color 0.3s ease-in-out;
-    border: none;
-    cursor: pointer;
+footer a {
+  color: #6c757d;
+  font-size: 0.9rem;
 }
 
-.btn-logout:hover {
-    background-color: #333;
-}
-.ev-options button {
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.price {
-    font-size: 1.5rem;
-    color: green;
-    margin: 20px 0;
-}
-
-.price-amount {
-    font-size: 1.5rem;
-    color: green;
-}
-
-.diviko{
-    margin-bottom: 20px;
-    align-content: center;
-}
-.ssxva{
-
-    text-decoration: none;
-    padding: 10px 30px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-.reserve-btn {
-    margin-top: 10px;
-    padding: 10px 30px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.reserve-btn:hover {
-    background-color: #555;
-}
-
-.confirmation-message {
-    font-size: 1.5rem;
-    color: green;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.back-btn {
-    padding: 10px 30px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.back-btn:hover {
-    background-color: #555;
-}
-
-.balance {
-    font-size: 1.5rem;
-    color: green;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.add-balance-btn {
-    margin-top: 10px;
-    padding: 10px 30px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.add-balance-btn:hover {
-    background-color: #555;
+footer a:hover {
+  color: #adb5bd;
 }
 
 .reservation-list {
-    margin-bottom: 30px;
+  background-color: #f1f3f5;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
-.reservation-list p {
-    font-size: 1rem;
-    color: #333;
-    margin: 5px 0;
+.reservation-list span {
+  display: inline-block;
+  margin-right: 1rem;
 }
 
-.reserve-new-btn {
-    padding: 10px 30px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
+.reserve-new-btn, .add-balance-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s;
+  margin: 1rem 0;
 }
 
-.reserve-new-btn:hover {
-    background-color: #555;
-}
-/* Center the entire checkbox container */
-.checkbox-container {
-    display: flex;
-    flex-direction: column; /* Stack checkboxes vertically */
-    align-items: center; /* Center-align the checkboxes */
+.reserve-new-btn:hover, .add-balance-btn:hover {
+  background-color: #218838;
 }
 
-/* Styling for the checkbox container */
-.styled-checkbox {
-    align-items: center;
-    margin-bottom: 10px; /* Space between each checkbox set */
+.input-group {
+  margin-bottom: 1.5rem;
 }
 
-/* Remove default margin and apply custom styles */
-.styled-checkbox input[type="checkbox"] {
-    margin: 0; /* Zero default margin */
-    margin-right: 10px; /* Space between the checkbox and the label text */
-    width: 20px; /* Size of the checkbox */
-    height: 20px;
-    border: 2px solid #333; /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    appearance: none; /* Remove default checkbox styling */
-    cursor: pointer;
-    transition: all 0.3s ease;
+.input-group label {
+  font-size: 1.1rem;
+  color: #495057;
 }
 
-/* Style for the checked state */
-.styled-checkbox input[type="checkbox"]:checked {
-    background-color: #333; /* Background color when checked */
+.reserve-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
 }
 
-/* Optional: Label styling */
-.styled-checkbox label {
-    font-size: 16px;
-    color: #333;
+.a-reserve-btn {
+  margin: 1rem 0;
+}
+
+.reserve-btn:hover {
+  background-color: #0056b3;
+}
+
+.add-balance-btn {
+  margin-top: 1rem;
+  background-color: #6c757d;
+}
+
+.add-balance-btn:hover {
+  background-color: #5a6268;
+}
+
+.form-container {
+  width:50%
 }

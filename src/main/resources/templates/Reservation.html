@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shearere - Parking Reservation</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
-    <div class="container">
+    <div class="container form-container">
         <header th:insert = "blocks/header::header"></header>
 
 
@@ -54,7 +54,7 @@
 
                 <button type="submit" class="reserve-btn">Reserve</button>
                 <br>
-                <a href="/profile" class="add-balance-btn">profile</a>
+                <a href="/profile" class="add-balance-btn">Profile</a>
             </form>
 
         </div>
