@@ -23,7 +23,7 @@ USER appuser
 VOLUME /tmp
 
 # copy the jar from builder
-COPY --from=builder /app/target/SHEUKVETE-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY --from=builder /app/target/demoApplication-0.0.1-SNAPSHOT.jar /app/app.jar
 
 # expose the port your app listens on
 EXPOSE 8081
