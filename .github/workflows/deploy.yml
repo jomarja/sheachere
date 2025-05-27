@@ -46,7 +46,18 @@ jobs:
         run: |
           kubectl apply -f $K8S_DIR/00-namespace.yaml
           kubectl apply -f $K8S_DIR/01-configmap.yaml
-          kubectl apply -f $K8S_DIR/02-secret.yaml
+
+      - name: Create Kubernetes Secret
+        run: |
+          kubectl delete secret app-secrets -n $NAMESPACE --ignore-not-found
+          kubectl create secret generic app-secrets \
+            --namespace $NAMESPACE \
+            --from-literal=SPRING_DATASOURCE_USERNAME="${{ secrets.DB_USERNAME }}" \
+            --from-literal=SPRING_DATASOURCE_PASSWORD="${{ secrets.DB_PASSWORD }}" \
+            --from-literal=JWT_SECRET="${{ secrets.JWT_SECRET }}"
+
+      - name: Continue Deployment
+        run: |
           kubectl apply -f $K8S_DIR/03-postgres.yaml
           kubectl apply -f $K8S_DIR/04-redis.yaml
           kubectl apply -f $K8S_DIR/05-app-deployment.yaml
